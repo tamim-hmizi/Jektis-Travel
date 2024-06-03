@@ -1,0 +1,233 @@
+/* Combined CSS for better maintainability */
+
+/* Common Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+label {
+    font-weight: 400;
+}
+
+.delBtn, .createBtn {
+    width: 40%;
+    margin-right: 5%;
+}
+
+.delBtn:hover {
+    background-color: #ff3f34;
+}
+
+.createBtn:hover {
+    background-color: #44bd32;
+}
+
+.closeBtn, #logout {
+    background-color: unset;
+    border: none;
+    color: #eaeaea;
+}
+
+.closeBtn:hover, #logout:hover {
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 15px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.close {
+    color: #111111;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.modal-footer {
+    padding: 10px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+
+#bar {    
+    background-color: #111111;
+    color: white;
+    padding: 0.4%;
+}
+
+#up {
+    font-size: 24px;
+    margin-top: 0.5%;
+    padding-left: 25px;
+}
+
+#log {
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.card {
+    border-radius: 2px;
+    margin-bottom: 10%;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.card-text, .card-title {
+    color: #555555;
+}
+
+.createCard {
+    border: 1px solid #eaeaea;
+}
+
+.add {
+    font-size: 84px;
+    color: #cacaca;
+    margin-left: 35%;
+    margin-bottom: 25%;
+    margin-top: 25%;
+}
+
+.container .card-title {
+    margin-left: 18%;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -11%;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 5rem;
+    padding: .5rem 0;
+    font-size: 1rem;
+    background-color: #fafafa;
+    border: 1px solid #fafafa;
+    border-radius: .25rem;
+}
+
+input.upload {
+    color: #555555;
+    width: 100%;
+}
+
+.input-group-addon {
+    height: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        font-size: 12px;
+    }
+    .row, html {
+        overflow-x: hidden;
+    }
+    .modal .modal-content, .createCard {
+        width: 85%;
+        margin-top: 15%;
+    }
+    .card {
+        width: 100%;
+        left: -10%;
+        margin-top: 5%;
+    }
+    #up {
+        margin-top: 5%;
+    }
+    #bar {
+        height: 55px;
+    }
+    #logout {
+        margin-top: -7%;
+        margin-right: -21%;
+        font-size: 18px;
+    }
+    .close {
+        margin-top: -5%;
+    }
+}
+
+.page-footer {
+    background-color: #111111;
+    padding: 0;
+    margin: 0;
+}
+
+.footerText, .headingText {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footerText {
+    color: #898989;
+    font-size: 16px;
+}
+
+.headingText {
+    font-weight: bolder;
+    color: #111111;
+    font-size: 24px;
+}
+
+.icon, .social-icon {
+    color: #ffc312;
+    padding: 0;
+}
+
+.social-icon:hover {
+    color: #ffc312;
+}
+
+.madeby {
+    color: #898989;
+    font-size: 12px;
+}
+
+.madeBy font {
+    color: #ffc312;
+}
+
+#fn, #ln, #eid, #mobile, #cpwd {
+    color: #ff3f34;
+    font-size: 12px;
+    margin-left: 28%;
+    margin-bottom: 0%;
+    display: none;
+}
