@@ -21,7 +21,6 @@ class Reservation
         $this->setUserId($user_id);
     }
 
-    // Getters
     public function getId()
     {
         return $this->id;
@@ -62,7 +61,7 @@ class Reservation
         return $this->user_id;
     }
 
-    // Setters
+    
     public function setNbPassengers($nb_passengers)
     {
         $this->nb_passengers = $nb_passengers;

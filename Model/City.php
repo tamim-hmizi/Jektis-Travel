@@ -9,7 +9,7 @@ class City
         $this->setName($name);
     }
 
-    // Getters
+   
     public function getId()
     {
         return $this->id;
@@ -20,7 +20,7 @@ class City
         return $this->name;
     }
 
-    // Setters
+  
     public function setName($name)
     {
         $this->name = $name;

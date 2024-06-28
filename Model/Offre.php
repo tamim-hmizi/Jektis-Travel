@@ -5,7 +5,7 @@ class Offre
     private $remise;
     private $travel_id;
 
-    // Constructor
+   
     public function __construct($remise = null, $travel_id = null)
     {
 
@@ -13,13 +13,13 @@ class Offre
         $this->travel_id = $travel_id;
     }
 
-    // Getter and Setter for id
+    
     public function getId()
     {
         return $this->id;
     }
 
-    // Getter and Setter for remise
+    
     public function getRemise()
     {
         return $this->remise;
@@ -30,7 +30,6 @@ class Offre
         $this->remise = $remise;
     }
 
-    // Getter and Setter for travel_id
     public function getTravelId()
     {
         return $this->travel_id;

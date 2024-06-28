@@ -11,7 +11,7 @@ class Travel
     private $guideName;
     private $guideContact;
     private $type;
-    private $description; // New property for description
+    private $description; 
 
     public function __construct($title, $image, $basePrice, $itinerary, $startDate, $endDate, $guideName, $guideContact, $type, $description)
     {
@@ -24,7 +24,7 @@ class Travel
         $this->setGuideName($guideName);
         $this->setGuideContact($guideContact);
         $this->setType($type);
-        $this->setDescription($description); // Set description
+        $this->setDescription($description); 
     }
 
     // Getters
@@ -80,7 +80,7 @@ class Travel
 
     public function getDescription()
     {
-        return $this->description; // Getter for description
+        return $this->description;
     }
 
     // Setters
@@ -131,6 +131,6 @@ class Travel
 
     public function setDescription($description)
     {
-        $this->description = $description; // Setter for description
+        $this->description = $description; 
     }
 }

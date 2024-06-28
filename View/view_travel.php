@@ -80,7 +80,6 @@
             border-color: #dc3545;
             border-radius: 5px;
         }
-       
     </style>
 </head>
 
@@ -165,6 +164,7 @@
                                         ?>
                                     </td>
                                     <td>
+                                        <a href="update_travel.php?id=<?= $travel['id'] ?>" class="btn btn-primary btn-sm">Modifier</a>
                                         <a href="delete_travel.php?id=<?= $travel['id'] ?>" class="btn btn-danger btn-sm">Supprimer</a>
                                     </td>
                                 </tr>

@@ -90,4 +90,44 @@ class OffreController
         $stmt->execute([$travel_id]);
         return $stmt->fetchAll();
     }
+
+    public function getOffreById($id)
+    {
+        $stmt = $this->pdo->prepare('SELECT * FROM offre WHERE id = ?');
+        $stmt->execute([$id]);
+        return $stmt->fetch();
+    }
+
+    public function updateOffre($id, $remise, $travel_id)
+    {
+        // Get the current travel details
+        $travel = $this->travelController->getTravelById($travel_id);
+
+        if ($travel && $travel['basePrice'] != 0) {
+            // Get the existing offer details
+            $existingOffre = $this->getOffreById($id);
+
+            if ($existingOffre) {
+                // Revert the discount on the travel base price if the remise is not zero
+                if ($existingOffre['remise'] != 0) {
+                    $originalPrice = $travel['basePrice'] / ((100 - $existingOffre['remise']) / 100);
+                    $this->travelController->updateTravelBasePrice($travel_id, $originalPrice);
+                }
+
+                // Update the offer
+                $query = "UPDATE offre SET remise = ?, travel_id = ? WHERE id = ?";
+                $stmt = $this->pdo->prepare($query);
+                $stmt->execute([$remise, $travel_id,$id]);
+
+                // Apply the new discount on the base price
+                $discountedPrice = $travel['basePrice'] * ((100 - $remise) / 100);
+                // Update the base price of the travel
+                $this->travelController->updateTravelBasePrice($travel_id, $discountedPrice);
+
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

@@ -135,6 +135,7 @@
                                     <td>{$offre['remise']} %</td>
                                     <td>{$travelTitle}</td>
                                     <td>
+                                      <a href='update_offre.php?id={$offre['id']}' class='btn btn-primary btn-sm'>Modifier</a>
                                         <a href='delete_offre.php?id={$offre['id']}' class='btn btn-danger btn-sm'>Supprimer</a>
                                     </td>
                                   </tr>";

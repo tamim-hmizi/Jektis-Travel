@@ -21,7 +21,7 @@ class User
         $this->setRole($role);
     }
 
-    // Getters
+
     public function getId()
     {
         return $this->id;
@@ -51,7 +51,7 @@ class User
         return $this->role;
     }
 
-    // Setters
+
     public function setEmail($email)
     {
 
